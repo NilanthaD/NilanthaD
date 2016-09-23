@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+	<div class="page-headder">
+	<img src="https://nwmissouri.instructure.com/files/565213/download?download_frd=1" >		
+	</div>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Nilantha</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="aboutMe.html">About Me</a></li>
+      <li><a href="Contacts.html">Contacts</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-education"></span> School</a></li>
+    </ul>
+  </div>
+</nav>
+
+<br><div class="jumbotron">
+	<h3>Convert Temperature</h3>
+	<h4>Fahrenheit to Celsius or Kelvin</h4>
+	<form class="form-inline">
+    	<div class="form-group">
+     	<label for="tempF">Fahrenheit:</label>
+     	<input type="text" class="form-control" id="tempF">
+    	</div>
+    	<span>To</span>
+    	<div class="form-group">
+      <select class="form-control" id="sel">
+        <option>Celsius</option>
+        <option>Kelvin</option>
+      </select>
+    </div>
+   	
+    	<!--<button type="button" class="btn btn-default" onclick="tempConvert()">Submit</button>-->
+    	<button type="button" class="btn btn-default" onclick="App.tempConvert()">Submit</button>
+
+      <div class="form-group">
+     <input type="text" class="form-control" id="tempC" readonly>
+    	</div>
+  	</form>
+	</div><br>
+
+  <div class="jumbotron" id="grades">
+    <h3>Calculate your Grades and GPA</h3>
+
+    <table class="table">
+      <tr>
+        <th>Subject</th>
+        <th>Points</th>
+        <th>Grades</th>
+      </tr>
+      <tr>
+        <td>Object Oriented Programming</td>
+        <td id="oop"><input type="text" id="oopIn" placeholder="points"></td>
+        <td><input type="text" id="oopGrade" placeholder="Grade" readonly></td>
+      </tr>
+      <tr>
+        <td>Web Developing and Services</td>
+        <td><input type="text" id="webIn" placeholder="points"></td>
+        <td><input type="text" id="webGrade" placeholder="Grade" readonly></td>
+      </tr>
+      <tr>
+        <td>Advance DBMS Topics</td>
+        <td><input type="text" id="adbIn" placeholder="points"></td>
+        <td><input type="text" id="adbGrade" placeholder="Grade" readonly></td>
+      </tr>
+    </table>
+    <button onclick="calGPA()">GPA</button>
+    <input type="text" readonly placeholder="GPA" id="gpa">
+  </div>
+
+  <div class="container">
+  <div class="panel-default">
+    <div class="panel-body"><h5><small>&copy; Northwest Missouri State University - Nilantha Dambadeniya</small></h5></div>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src = convert.js></script>
+</body>
+</html>
